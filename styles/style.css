@@ -643,7 +643,14 @@ header .fa-times {
     min-width: 102.5%;
     min-height: 100%;
     z-index: -1;
+    transform: translateX(calc((100% - 100vw) / 2));
     filter: blur(2px) brightness(60%);
+}
+
+.bg-music {
+    position: fixed;
+    right: 8px;
+    bottom: 8px;
 }
 
 
