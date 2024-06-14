@@ -25,6 +25,58 @@ html {
     scroll-behavior: smooth !important;
 }
 
+#preloader {
+    background: var(--gray) url(../images/Dual\ Ring@1x-1.0s-200px-200px.gif) no-repeat center center;
+    background-size: 7%;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+    opacity: 1;
+}
+
+#preloader-start {
+    background: var(--gray);
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+    overflow: hidden;
+    transition: .3s;
+    opacity: 1;
+}
+
+#preloader-start button {
+    width: 18%;
+    height: 9%;
+    background-color: var(--lred);
+    border: none;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 500;
+    transition: .2s;
+    cursor: pointer;
+}
+
+#preloader-start button span {
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+#preloader-start button:hover {
+    background: var(--red);
+}
+
 .heading {
     font-size: 4rem;
     color: var(--lred);
@@ -63,7 +115,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    z-index: 1000;
+    z-index: 100;
     transition: .2s;
 }
 
