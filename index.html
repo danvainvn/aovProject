@@ -17,14 +17,23 @@
 
     <div id="preloader"></div>
     <div id="preloader-start">
-        <button class="start-btn">
+        <button class="startPluginbtn" onclick="startStop()">
             <span>start plugin</span>
         </button>
     </div>
 
     <div class="bg-music">
-        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div class="elfsight-app-9470fd94-8492-4281-824c-81871fcefba8" data-elfsight-app-lazy></div>
+        <!-- <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-9470fd94-8492-4281-824c-81871fcefba8" data-elfsight-app-lazy></div> -->
+        <audio id="bg-music" loop>
+            <source src="audios/bgmusic.mp3" type="audio/mpeg">
+        </audio>
+        <button class="stopbtn" onclick="addId1(); startStop()"><i class="fa-solid fa-volume-high"></i></button>
+        <button class="startbtn" onclick="addId2(); startStop()"><i class="fa-solid fa-volume-xmark"></i></button>
+
+        <div class="innerBox">
+            <input type="range" class="inputRange" min="0" max="100" value="100">
+        </div>
     </div>
 
     <header>
@@ -318,6 +327,9 @@ Vị trí sở trường của các thành viên:
     <script src="scripts/main.js"></script>
     <script src="scripts/loader.js"></script>
     <script src="scripts/start.js"></script>
+    <script src="scripts/audio.js"></script>
+    <script src="scripts/fade.js"></script>
+    <script src="scripts/volume.js"></script>
 
 </body>
 

@@ -701,9 +701,135 @@ header .fa-times {
 
 .bg-music {
     position: fixed;
-    right: 8px;
-    bottom: 8px;
+    right: 8px; bottom: 8px;
+    width: 6rem; height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 300;
 }
+
+.bg-music .stopbtn {
+    width: 5rem; height: 5rem;
+    border: none; border-radius: 1rem;
+    background: var(--gray);
+    cursor: pointer;
+}
+
+.bg-music .startbtn {
+    width: 5rem; height: 5rem;
+    border: none; border-radius: 1rem;
+    background: var(--gray);
+    display: none;
+    cursor: pointer;
+}
+
+.bg-music .stopbtn i,
+.bg-music .startbtn {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.bg-music .innerBox {
+    display: none;
+}
+
+.bg-music:hover .innerBox {
+    position: absolute; background: var(--gray);
+    width: 13rem; height: auto;
+    bottom: 182.5%; right: -59%;
+    padding: 5px 5px 5px 0;
+    border-radius: 0 1rem 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-90deg);
+    overflow: hidden;
+    animation: fade-in .3s;
+}
+
+.bg-music:not(:hover) .innerBox.did-fade-in {
+    position: absolute; background: var(--gray);
+    width: 13rem; height: auto;
+    bottom: 182.5%; right: -59%;
+    padding: 5px 5px 5px 0;
+    border-radius: 0 1rem 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-90deg);
+    overflow: hidden;
+    animation: fade-out .3s;
+}
+
+input[type=range] {
+    width: 85%;
+    display: block;
+    -webkit-appearance: none;
+    height: 1rem; margin-bottom: 0.8px;
+    position: relative;
+    background: var(--black);
+    border-radius: 5px;
+    outline: none;
+}
+
+.bg-music:hover .innerBox input[type=range] {
+    width: 85%;
+    display: block;
+    -webkit-appearance: none;
+    height: 1rem; margin-bottom: 0.8px;
+    position: relative;
+    background: var(--black);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.bg-music:hover .innerBox input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    display: block;
+    background: var(--lred);
+    width: 13px; height: 13px;
+    margin-bottom: -0.8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    display: block;
+    background: var(--lred);
+    width: 13px; height: 13px;
+    margin-bottom: -0.8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#stopbtn {
+    display: none;
+}
+
+#startbtn {
+    display: block;
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    0% {
+        opacity: 1;
+      }
+    100% {
+        opacity: 0;
+    }
+  }
 
 
 @media (min-aspect-ratio:16/9) {
