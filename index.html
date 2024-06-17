@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AOV Champions</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="preloader"></div>
+    <div id="preloader-start">
+        <button class="startPluginbtn" onclick="startStop()">
+            <span>start plugin</span>
+        </button>
+    </div>
+    <div class="bg-music">
+        <audio id="bg-music" loop>
+            <source src="audios/bgmusic.mp3" type="audio/mpeg">
+        </audio>
+        <button class="stopbtn" onclick="addId1(); startStop()"><i class="fa-solid fa-volume-high"></i></button>
+        <button class="startbtn" onclick="addId2(); startStop()"><i class="fa-solid fa-volume-xmark"></i></button>
+
+        <div class="innerBox">
+            <input type="range" class="inputRange" min="0" max="100" value="100">
+        </div>
+    </div>
+
+    <nav class="navBar">
+        <div class="logo">
+            <a href="#home">
+                <i class="fa-solid fa-fire-flame-curved"></i>NO<span class="dot">.</span>1
+            </a>
+        </div>
+
+        <ul class="navContent">
+            <li class="navItem">
+                <a href="#home" class="navLink active">trang chủ</a>
+            </li>
+            <li class="navItem">
+                <a href="#about" class="navLink">giới thiệu</a>
+            </li>
+            <li class="navItem">
+                <a href="#members" class="navLink">thành viên</a>
+            </li>
+            <li class="navItem">
+                <a href="#champion" class="navLink">giải đấu</a>
+            </li>
+            <li class="navItem">
+                <a href="#events" class="navLink">sự kiện</a>
+            </li>
+        </ul>
+
+        <a href="" class="registerBtn">
+            <button type="button">đăng ký</button>
+        </a>
+    </nav>
+
+    <section class="home" id="home">
+        <video  class="bgClip" preload="auto" autoplay loop muted plays-inline>
+            <source src="videos/bgClip.mp4" type="video/mp4">
+        </video>
+
+        <h1 class="heading">giải thi đấu liên quân fpt</h1>
+        <h3 class="title">kết nối đam mê <span class="minus">-</span> chinh phục đỉnh cao<span class="dot">.</span></h3>
+        <a href="" class="registerBtn">
+            <button type="button">đăng ký</button>
+        </a>
+    </section>
+
+    <section class="about" id="about">
+        <h1 class="heading">nhóm<i class="fa-solid fa-fire-flame-curved"></i>no.1</h1>
+        <h3 class="title">Đứng hạng 2 không ai hạng <span>1.</span></h3>
+
+        <div class="container">
+            <div class="paragraph">
+                <h1 class="heading">Nhóm những thành viên tích cực.</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, 
+                    adipisicing elit. Atque deleniti libero voluptate voluptatum eligendi, 
+                    et reiciendis laudantium aliquam harum vel, 
+                    fugiat recusandae animi impedit commodi natus debitis omnis eos voluptatibus.
+                </p>
+            </div>
+            <div class="image">
+                <img src="images/team.jfif" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="members" id="members">
+        <h1 class="heading">thành viên</h1>
+        <h3 class="title">Những mảnh ghép tạo nên NO<span>.</span>1</h3>
+
+        <div class="container swiper">
+            <div class="cardContent">
+                <div class="swiper-wrapper">
+                    <article class="cardArticle swiper-slide">
+                        <div class="cardImage">
+                            <img src="images/square.png" class="cardImg">
+                        </div>
+
+                        <div class="cardData">
+                            <h1 class="cardName heading">quang vinh</h1>
+                            <p class="cardDescription">
+                                <i class="fa-solid fa-user-gear"></i> nhân viên kỹ thuật
+                            </p>
+
+                            <a href="#" class="cardButton">
+                                <button type="button">Xem thêm</button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="cardArticle swiper-slide">
+                        <div class="cardImage">
+                            <img src="images/square.png" class="cardImg">
+                        </div>
+
+                        <div class="cardData">
+                            <h1 class="cardName heading">đại nghĩa</h1>
+                            <p class="cardDescription">
+                                <i class="fa-solid fa-users-line"></i> trưởng phòng
+                            </p>
+
+                            <a href="#" class="cardButton">
+                                <button type="button">Xem thêm</button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="cardArticle swiper-slide">
+                        <div class="cardImage">
+                            <img src="images/square.png" class="cardImg">
+                        </div>
+
+                        <div class="cardData">
+                            <h1 class="cardName heading">quang thanh</h1>
+                            <p class="cardDescription">
+                                <i class="fa-solid fa-user-doctor"></i> nhân viên sửa lỗi
+                            </p>
+
+                            <a href="#" class="cardButton">
+                                <button type="button">Xem thêm</button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="cardArticle swiper-slide">
+                        <div class="cardImage">
+                            <img src="images/square.png" class="cardImg">
+                        </div>
+
+                        <div class="cardData">
+                            <h1 class="cardName heading">bình minh</h1>
+                            <p class="cardDescription">
+                                <i class="fa-solid fa-chalkboard-user"></i> nhân viên thiết kế
+                            </p>
+
+                            <a href="#" class="cardButton">
+                                <button type="button">Xem thêm</button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="cardArticle swiper-slide">
+                        <div class="cardImage">
+                            <img src="images/square.png" class="cardImg">
+                        </div>
+
+                        <div class="cardData">
+                            <h1 class="cardName heading">văn đahy</h1>
+                            <p class="cardDescription">
+                                <i class="fa-solid fa-user-pen"></i> nhân viên tạo ND
+                            </p>
+
+                            <a href="#" class="cardButton">
+                                <button type="button">Xem thêm</button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="cardArticle swiper-slide">
+                        <div class="cardImage">
+                            <img src="images/square.png" class="cardImg">
+                        </div>
+
+                        <div class="cardData">
+                            <h1 class="cardName heading">trung nghĩa</h1>
+                            <p class="cardDescription">
+                                <i class="fa-solid fa-user-check"></i> nhân viên giám sát
+                            </p>
+
+                            <a href="#" class="cardButton">
+                                <button type="button">Xem thêm</button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="cardArticle swiper-slide">
+                        <div class="cardImage">
+                            <img src="images/square.png" class="cardImg">
+                        </div>
+
+                        <div class="cardData">
+                            <h1 class="cardName heading">tấn phát</h1>
+                            <p class="cardDescription">
+                                <i class="fa-solid fa-chalkboard-user"></i> nhân viên thiết kế
+                            </p>
+
+                            <a href="#" class="cardButton">
+                                <button type="button">Xem thêm</button>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="swiper-button-prev">
+                <i class="fa-solid fa-circle-left"></i>
+            </div>
+            <div class="swiper-button-next">
+                <i class="fa-solid fa-circle-right"></i>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="champion" id="champion">
+        <h1 class="heading">giải đấu</h1>
+        <h3 class="title">kết nối đam mê <span class="minus">-</span> chinh phục đỉnh cao<span class="dot">.</span></h3>
+
+        <div class="container">
+            <div class="image">
+                <img src="images/champfpt.jpg" alt="">
+            </div>
+
+            <div class="paragraph">
+                <h1 class="heading">giải đấu AOV FPT mùa 3</h1>
+                <p>
+                    Đây là nơi bạn thể hiện kỹ năng, tinh thần đồng đội và đam mê. 
+                    Hãy cháy hết mình, học hỏi và cùng nhau tạo nên những khoảnh khắc đáng nhớ. 
+                    Chúng ta sẽ biến mỗi trận đấu thành một câu chuyện kỳ diệu và chinh phục mọi đỉnh cao!
+                    <br> <br>
+                    Hãy để từng pha combat là minh chứng cho sự nỗ lực không ngừng nghỉ. 
+                    Hãy cùng nhau thắp lên ngọn lửa nhiệt huyết, không ngừng tiến lên phía trước, 
+                    và biến mỗi khoảnh khắc trên chiến trường thành một kỷ niệm không thể phai mờ. 
+                    <br> <br>
+                    Đừng bao giờ quên rằng chúng ta không chỉ thi đấu vì chiến thắng, 
+                    mà còn vì niềm đam mê mãnh liệt với Liên Quân. 
+                    Hãy để ngọn lửa trong tim bạn dẫn đường, để mỗi bước di chuyển, 
+                    mỗi pha xử lý đều là một biểu hiện của khát khao chiến thắng. 
+                    Cùng nhau, chúng ta sẽ chinh phục mọi thử thách và vươn tới những đỉnh cao mới. 
+                    Hãy đốt cháy đam mê, và để những khoảnh khắc tuyệt vời này sống mãi trong trái tim chúng ta!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="events" id="events">
+        <h1 class="heading">sự kiện</h1>
+        <h3 class="title">Nổi bật và đang được diễn ra<span style="color: #ff5252;">.</span></h3>
+
+        <div class="container swiper">
+            <div class="cardContent2">
+                <div class="swiper-wrapper">
+                    <article class="cardArticle swiper-slide">
+                        <div class="cardImage">
+                            <img src="images/champ.jpg" class="cardImg">
+                        </div>
+
+                        <div class="cardData">
+                            <h1 class="cardName heading">BẢNG ĐẤU AOV mùa 3.</h1>
+                            <p class="cardDescription">
+                                🤩MỘT SỐ LƯU Ý KHI THAM GHIA GIẢI ĐẤU: <br> <br>
+                                1. Thời gian tập trung các đội có mặt trước 15h00. <br>
+                                2. Trang phục: 100% sinh viên mặc áo cam. <br>
+                                3. Trong quá trình chơi khuyến khích các đội có 4G thì sử dụng 4G. <br>
+                                4. Đọc kĩ thể lệ trước khi tham gia giải đấu. <br>
+                                5. BTC đã chốt ds nên sẽ không giải quyết bất kì trường hợp thay đổi 
+                                người nào tại thời điểm hiện...
+                            </p>
+
+                            <a href="#" class="cardButton">
+                                <button type="button">Xem thêm</button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="cardArticle swiper-slide">
+                        <div class="cardImage">
+                            <img src="images/mini.jpg" class="cardImg">
+                        </div>
+
+                        <div class="cardData">
+                            <h1 class="cardName heading">CON SỐ GÌ ĐÂY!?</h1>
+                            <p class="cardDescription">
+                                Chúng tôi xin chúc mừng các bạn đã trúng giải trong mini game lần này! 🎁 <br>
+                                ✨ Con số may mắn lần lượt là: <br>
+                                    [77] - [7] - [61] <br> <br>
+                                🥳 Danh sách người chiến thắng: <br>
+                                [Tag tên người chiến thắng 1] - 1 THẺ GARENA 100K <br>
+                                [Tag tên người chiến thắng 2] - 1 THẺ GARENA 50K <br>
+                                [Tag tên người chiến thắng 3] - 1 CHIẾC MÓC KHÓA 
+                            </p>
+
+                            <a href="#" class="cardButton">
+                                <button type="button">Xem thêm</button>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="cardArticle swiper-slide">
+                        <div class="cardImage">
+                            <img src="images/miniog.jpg" class="cardImg">
+                        </div>
+
+                        <div class="cardData">
+                            <h1 class="cardName heading">hỡi CÁC KIỆN TƯỚNG</h1>
+                            <p class="cardDescription">
+                                🔴 Chắc hẳn các bạn đang mong chờ về giải đấu tuyệt vời của 
+                                Liên Quân Mobile x PTCĐ FPT Polytechnic dành cho các bạn sinh viên xinh trai, đẹp gái. 
+                                Trước ngày nổ súng bắt đầu giải đấu, có một MINI GAME với những MÓN QUÀ SIÊU KHỦNG !!! <br>
+                                🔸 Thể lệ trò chơi: <br>
+                                🔰 Mỗi người comment vào bài viết này 1 con số bất kì (1-100) trong 1 lần duy nhất. 
+                                Kết quả sẽ được ghi nhận và sẽ random để tìm ra 3 con số MAY MẮN với người phần quà 
+                                tương ứng:...
+                            </p>
+
+                            <a href="#" class="cardButton">
+                                <button type="button">Xem thêm</button>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="swiper-button-prev">
+                <i class="fa-solid fa-circle-left"></i>
+            </div>
+            <div class="swiper-button-next">
+                <i class="fa-solid fa-circle-right"></i>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/swiper-bundle.min.js"></script>
+    <script src="scripts/swiper.js"></script>
+    <script src="scripts/loader.js"></script>
+    <script src="scripts/start.js"></script>
+    <script src="scripts/fade.js"></script>
+    <script src="scripts/audio.js"></script>
+    <script src="scripts/volume.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
