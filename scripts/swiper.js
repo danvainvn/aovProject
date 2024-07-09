@@ -1,7 +1,7 @@
 let swiperCards = new Swiper('.cardContent', {
     loop: true,
     spaceBetween: 32,
-    grabCursor: true,
+    grabCursor: false,
   
     pagination: {
       el: '.swiper-pagination',
@@ -20,7 +20,7 @@ let swiperCards = new Swiper('.cardContent', {
 let swiperCards2 = new Swiper('.cardContent2', {
   loop: true,
   spaceBetween: 32,
-  grabCursor: true,
+  grabCursor: false,
 
   pagination: {
     el: '.swiper-pagination',
